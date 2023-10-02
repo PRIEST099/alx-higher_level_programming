@@ -9,17 +9,18 @@
 
 int check_cycle(listint_t *list)
 {
-	listint_t *found = list;
-	int a = 0;
+	listint_t *slow = list;
+	listint_t * fast = list;
+	
 	if (!list)
 		return (0);
 
-	while (list != NULL)
+	while (slow && fast && fast->next)
 	{
-		if (list == found && a != 0)
+		slow = slow->next;
+		fast = fast->next;
+		if (slow == fast)
 			return (1);
-		list = list->next;
-		a++;
 	}
 	return (0);
 }
