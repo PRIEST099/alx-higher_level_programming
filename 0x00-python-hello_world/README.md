@@ -23,8 +23,9 @@ This directory contains a collection of introductory Python scripts and projects
 2. Navigate to the "0x00-python-hello_world" directory.
 3. Explore the Python scripts and run them to see the results.
 4. Start your Python journey and have fun learning!
+
 ## Self Test
-You can use the exercises in this repository to test your Python programming language. Here are  some of the exercises available:
+You can use the exercises in this repository to test your Python programming language. Here are some of the exercises available:
 
 **`0.run python file`**
 
@@ -38,14 +39,14 @@ You can use the exercises in this repository to test your Python programming lan
 
 <p>The Python file name will be saved in the environment variable <code>$PYFILE</code></p>
 
-<pre><code>guillaume@ubuntu:~/py/0x00$ cat main.py 
+<pre><code>PRIEST099@ubuntu:~/py/0x00$ cat main.py
 #!/usr/bin/python3
 print("Best School")
 
-guillaume@ubuntu:~/py/0x00$ export PYFILE=main.py
-guillaume@ubuntu:~/py/0x00$ ./0-run
+PRIEST099@ubuntu:~/py/0x00$ export PYFILE=main.py
+PRIEST099@ubuntu:~/py/0x00$ ./0-run
 Best School
-guillaume@ubuntu:~/py/0x00$ 
+PRIEST099@ubuntu:~/py/0x00$
 </code></pre>
 
   </div>
@@ -63,10 +64,10 @@ guillaume@ubuntu:~/py/0x00$
 
 <p>The Python code will be saved in the environment variable <code>$PYCODE</code></p>
 
-<pre><code>guillaume@ubuntu:~/py/0x00$ export PYCODE='print(f"Best School: {88+10}")'
-guillaume@ubuntu:~/py/0x00$ ./1-run_inline 
+<pre><code>PRIEST099@ubuntu:~/py/0x00$ export PYCODE='print(f"Best School: {88+10}")'
+PRIEST099@ubuntu:~/py/0x00$ ./1-run_inline
 Best School: 98
-guillaume@ubuntu:~/py/0x00$ 
+PRIEST099@ubuntu:~/py/0x00$
 </code></pre>
 
   </div>
@@ -85,9 +86,9 @@ guillaume@ubuntu:~/py/0x00$
 <li>Use the function <code>print</code></li>
 </ul>
 
-<pre><code>guillaume@ubuntu:~/py/0x00$ ./2-print.py 
+<pre><code>PRIEST099@ubuntu:~/py/0x00$ ./2-print.py
 "Programming is like building a multilingual puzzle
-guillaume@ubuntu:~/py/0x00$
+PRIEST099@ubuntu:~/py/0x00$
 </code></pre>
 
   </div>
@@ -116,9 +117,9 @@ guillaume@ubuntu:~/py/0x00$
 <li>You have to use f-strings <a href="/rltoken/Ju0J8BxkuPX5yKZctyKfsQ" title="tips" target="_blank">tips</a></li>
 </ul>
 
-<pre><code>guillaume@ubuntu:~/py/0x00$ ./3-print_number.py
+<pre><code>PRIEST099@ubuntu:~/py/0x00$ ./3-print_number.py
 98 Battery street
-guillaume@ubuntu:~/py/0x00$ 
+PRIEST099@ubuntu:~/py/0x00$
 </code></pre>
 
   </div>
@@ -146,9 +147,9 @@ guillaume@ubuntu:~/py/0x00$
 <li>You have to use f-strings</li>
 </ul>
 
-<pre><code>guillaume@ubuntu:~/py/0x00$ ./4-print_float.py
+<pre><code>PRIEST099@ubuntu:~/py/0x00$ ./4-print_float.py
 Float: 3.14
-guillaume@ubuntu:~/py/0x00$ 
+PRIEST099@ubuntu:~/py/0x00$
 </code></pre>
 
   </div>
@@ -178,10 +179,10 @@ guillaume@ubuntu:~/py/0x00$
 <li>Your program should be maximum 5 lines long</li>
 </ul>
 
-<pre><code>guillaume@ubuntu:~/py/0x00$ ./5-print_string.py 
+<pre><code>PRIEST099@ubuntu:~/py/0x00$ ./5-print_string.py
 Holberton SchoolHolberton SchoolHolberton School
 Holberton
-guillaume@ubuntu:~/py/0x00$ 
+PRIEST099@ubuntu:~/py/0x00$
 </code></pre>
 
   </div>
@@ -204,11 +205,11 @@ guillaume@ubuntu:~/py/0x00$
 <li>Your program should be exactly 5 lines long</li>
 </ul>
 
-<pre><code>guillaume@ubuntu:~/py/0x00$ ./6-concat.py
+<pre><code>PRIEST099@ubuntu:~/py/0x00$ ./6-concat.py
 Welcome to Holberton School!
-guillaume@ubuntu:~/py/0x00$ wc -l 6-concat.py
+PRIEST099@ubuntu:~/py/0x00$ wc -l 6-concat.py
 5 6-concat.py
-guillaume@ubuntu:~/py/0x00$ 
+PRIEST099@ubuntu:~/py/0x00$
 </code></pre>
 
   </div>
@@ -233,17 +234,16 @@ guillaume@ubuntu:~/py/0x00$
 <li><code>middle_word</code> should contain the value of the variable <code>word</code> without the first and last letters</li>
 </ul>
 
-<pre><code>guillaume@ubuntu:~/py/0x00$ ./7-edges.py
+<pre><code>PRIEST099@ubuntu:~/py/0x00$ ./7-edges.py
 First 3 letters: Hol
 Last 2 letters: on
 Middle word: olberto
-guillaume@ubuntu:~/py/0x00$ wc -l 7-edges.py
+PRIEST099@ubuntu:~/py/0x00$ wc -l 7-edges.py
 8 7-edges.py
-guillaume@ubuntu:~/py/0x00$ 
+PRIEST099@ubuntu:~/py/0x00$
 </code></pre>
 
   </div>
-
 
 **`Create New Sentence`**
 
@@ -263,11 +263,11 @@ guillaume@ubuntu:~/py/0x00$
 <li>You are not allowed to use string literals</li>
 </ul>
 
-<pre><code>guillaume@ubuntu:~/py/0x00$ ./8-concat_edges.py
+<pre><code>PRIEST099@ubuntu:~/py/0x00$ ./8-concat_edges.py
 object-oriented programming with Python
-guillaume@ubuntu:~/py/0x00$ wc -l 8-concat_edges.py
+PRIEST099@ubuntu:~/py/0x00$ wc -l 8-concat_edges.py
 5 8-concat_edges.py
-guillaume@ubuntu:~/py/0x00$ 
+PRIEST099@ubuntu:~/py/0x00$
 </code></pre>
 
   </div>
@@ -286,7 +286,7 @@ guillaume@ubuntu:~/py/0x00$
 <li>Your script should be maximum 98 characters long (please check with <code>wc -m 9-easter_egg.py</code>)</li>
 </ul>
 
-<pre><code>guillaume@ubuntu:~/py/0x00$ ./9-easter_egg.py
+<pre><code>PRIEST099@ubuntu:~/py/0x00$ ./9-easter_egg.py
 The Zen of Python, by Tim Peters
 
 Beautiful is better than ugly.
@@ -308,11 +308,10 @@ Although never is often better than *right* now.
 If the implementation is hard to explain, it's a bad idea.
 If the implementation is easy to explain, it may be a good idea.
 Namespaces are one honking great idea -- let's do more of those!
-guillaume@ubuntu:~/py/0x00$
+PRIEST099@ubuntu:~/py/0x00$
 </code></pre>
 
   </div>
-
 
 ## Contributing
 Feel free to contribute to this directory by adding more Python scripts or improving the existing ones. If you have ideas or enhancements, please open a pull request.
