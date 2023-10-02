@@ -11,6 +11,8 @@ int check_cycle(listint_t *list)
 {
 	listint_t *found = list;
 	int a = 0;
+	if (!list)
+		return (0);
 
 	while (list != NULL)
 	{
