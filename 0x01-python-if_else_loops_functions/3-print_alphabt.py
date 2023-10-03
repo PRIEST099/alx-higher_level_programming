@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 for i in 'abcdefghijklmnopqrstuvwxyz':
     if i != 'q' and i != 'e':
-        print(f"{i.lower()}", end="")
+        print("{}".format(i.lower()), end="")
