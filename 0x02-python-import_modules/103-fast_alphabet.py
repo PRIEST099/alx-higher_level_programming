@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-for letter in range(ord('A'), ord('Z') + 1):
-    print("{}".format(chr(letter)), end="" if chr(letter) != 'Z' else "\n")
+from string import ascii_uppercase
+print(ascii_uppercase)
+
