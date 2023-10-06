@@ -31,47 +31,36 @@ int list_length(listint_t **head)
 
 int is_palindrome(listint_t **head)
 {
-	int list_len, act_len, i, j;
-	listint_t *first = NULL;
-	listint_t *second = NULL;
+    int list_len, act_len, i;
+    listint_t *first = *head;
+    listint_t *second = NULL;
+    listint_t *prev = NULL;
+    listint_t *temp = NULL;
 
-	if (head == NULL || *head == NULL)
-		return (1);
-	printf("Test one\n\n");
-	first = malloc(sizeof(listint_t));
-	if (first == NULL)
-		return (0);
-	second = malloc(sizeof(listint_t));
-	if (second == NULL)
-	{
-		free(first);
-		return (0);
-	}
-	printf("Test two\n\n");
-	first = *head;
-	second = *head;
-	list_len = list_length(head);
-	act_len = (list_len % 2 == 0) ? (list_len / 2) :
-		(list_len / 2) - 1;
-	printf("Test three\n\n");
-	for (i = 1; i <= act_len; i++)
-	{
-		for (j = list_len; j >= i; j--)
-		{
-			second = second->next;
-			printf("Test tfor incrementing second\n\n");
-		}
-		if (first->n != second->n)
-		{
-			printf("Test for not pallindrome\n\n");
-			free(first);
-			free(second);
-			return (0);
-		}
-		printf("Test for not pallindrome\n\n");
-		first = first->next;
-		second = second->next;
-	}
-	printf("Test successful execution\n\n");
-	return (1);
+    if (head == NULL || *head == NULL)
+        return (1);
+
+    list_len = list_length(head);
+    act_len = (list_len % 2 == 0) ? (list_len / 2) : (list_len / 2) + 1;
+
+    for (i = 0; i < act_len; i++)
+    {
+        temp = first;
+        while (temp->next != NULL)
+        {
+            prev = temp;
+            temp = temp->next;
+        }
+        second = temp;
+
+        if (first->n != second->n)
+            return (0);
+
+        prev->next = NULL;  // Remove the last element
+        free(second);
+        first = first->next;
+    }
+
+    return (1);
 }
+
