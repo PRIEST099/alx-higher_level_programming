@@ -31,36 +31,33 @@ int list_length(listint_t **head)
 
 int is_palindrome(listint_t **head)
 {
-    int list_len, act_len, i;
-    listint_t *first = *head;
-    listint_t *second = NULL;
-    listint_t *prev = NULL;
-    listint_t *temp = NULL;
-
-    if (head == NULL || *head == NULL)
-        return (1);
-
-    list_len = list_length(head);
-    act_len = (list_len % 2 == 0) ? (list_len / 2) : (list_len / 2) + 1;
-
-    for (i = 0; i < act_len; i++)
-    {
-        temp = first;
-        while (temp->next != NULL)
-        {
-            prev = temp;
-            temp = temp->next;
-        }
-        second = temp;
-
-        if (first->n != second->n)
-            return (0);
-
-        prev->next = NULL;  // Remove the last element
-        free(second);
-        first = first->next;
-    }
-
-    return (1);
+	int list_len, act_len, i;
+	listint_t *first = *head;
+	listint_t *second = NULL;
+	listint_t *prev = NULL;
+	listint_t *temp = NULL;
+	
+	if (head == NULL || *head == NULL)
+		return (1);
+	
+	list_len = list_length(head);
+	act_len = (list_len % 2 == 0) ? (list_len / 2) : (list_len / 2) + 1;
+	
+	for (i = 0; i < act_len; i++)
+	{
+		temp = first;
+		while (temp->next != NULL)
+		{
+			prev = temp;
+			temp = temp->next;
+		}
+		second = temp;
+		if (first->n != second->n)
+			return (0);
+		prev->next = NULL;
+		free(second);
+		first = first->next;
+	}
+	return (1);
 }
 
