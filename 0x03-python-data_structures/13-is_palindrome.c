@@ -57,7 +57,7 @@ int is_palindrome(listint_t **head)
 	int list_len, second_address, i;
 	listint_t *first = *head;
 	listint_t *second = *head;
-	listint_t temp = NULL;
+	listint_t *temp = NULL;
 
 	if (*head == NULL || (*head)->next == NULL)
 		return (1);
