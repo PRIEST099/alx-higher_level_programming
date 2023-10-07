@@ -42,9 +42,8 @@ listint_t *rev_list(listint_t *head)
 		prev = current;
 		current = next;
 	}
-
 	head = prev;
-	return head;
+	return (head);
 }
 
 /**
@@ -55,12 +54,16 @@ listint_t *rev_list(listint_t *head)
 
 int is_palindrome(listint_t **head)
 {
-	int list_len, second_address, i, loop;
+	int list_len, second_address, i;
 	listint_t *first = *head;
 	listint_t *second = *head;
+	listint_t temp = NULL;
+
+	if (*head == NULL || (*head)->next == NULL)
+		return (1);
 
 	list_len = list_length(head);
-	second_address = (list_len %2 == 0) ? (list_len / 2) : (list_len / 2) + 1;
+	second_address = (list_len % 2 == 0) ? (list_len / 2) : (list_len / 2) + 1;
 	for (i = 0; i < second_address; i++)
 	{
 		second = second->next;
@@ -69,9 +72,18 @@ int is_palindrome(listint_t **head)
 	while (second != NULL)
 	{
 		if (second->n != first->n)
+		{
 			return (0);
+		}
+
 		first = first->next;
 		second = second->next;
+	}
+	while (*head != NULL)
+	{
+		temp = *head;
+		*head = (*head)->next;
+		free(temp);
 	}
 	return (1);
 }
