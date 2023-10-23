@@ -10,7 +10,7 @@ def safe_print_list_integers(my_list=[], x=0):
             if isinstance(i, int):
                 print("{:d}".format(i), end="")
                 printed += 1
-        except Exception:
-            break
+        except IndexError as ne:
+            print(ne)
     print()
     return printed
