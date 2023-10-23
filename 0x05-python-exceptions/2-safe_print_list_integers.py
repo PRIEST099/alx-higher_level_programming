@@ -5,11 +5,11 @@ def safe_print_list_integers(my_list=[], x=0):
 
     for i in my_list:
         try:
-            print("{:d}".format(i), end="")
-            printed += 1
-            if printed == x:
+            if printed >= x:
                 break
-        except (ValueError, TypeError):
-            continue
+            if isinstance(i, int):
+                print("{:d}".format(i), end="")
+        except Exception:
+            break
     print()
     return printed
