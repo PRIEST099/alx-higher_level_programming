@@ -3,14 +3,11 @@
 def safe_print_list_integers(my_list=[], x=0):
     printed = 0
 
-    for i in my_list:
+    for i in range(x):
         try:
-            if printed >= x:
-                raise IndexError
-            if isinstance(i, int):
-                print("{:d}".format(i), end="")
-                printed += 1
-        except IndexError as ne:
-            print(ne)
+            print("{:d}".format(my_list[i]), end="")
+            printed += 1
+        except (ValueError, TypeError):
+            pass
     print()
     return printed
