@@ -8,7 +8,7 @@ class Square:
     def __init__(self, size=0):
         """constructor object.
         Args:
-        size: length of the side of the square
+        size(int): length of the side of the square
         """
         if isinstance(size, int):
             self.__size = size
