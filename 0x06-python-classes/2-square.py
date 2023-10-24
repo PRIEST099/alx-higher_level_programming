@@ -1,18 +1,17 @@
 #!/usr/bin/python3
-"""Module interpreter"""
+"""Define a class Square."""
 
 
 class Square:
-    """defines a square"""
+    """Represent a square."""
 
     def __init__(self, size=0):
-        """constructor object.
+        """Initialize a new Square.
         Args:
-        size(int): length of the side of the square
+            size (int): The size of the new square.
         """
-        if isinstance(size, int):
-            self.__size = size
-        else:
+        if not isinstance(size, int):
             raise TypeError("size must be an integer")
-        if size < 0:
-            raies ValueError("size must be >= 0")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        self.__size = size
