@@ -6,5 +6,5 @@ def from_json_string(my_str):
     """a dunction to load a json string"""
 
     import json
-    result = json.load(my_str)
+    result = json.loads(my_str)
     return result
