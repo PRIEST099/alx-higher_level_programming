@@ -7,5 +7,5 @@ def load_from_json_file(filename):
 
     import json
     with open(filename, "r", encoding="utf-8") as f:
-        obj = json.loads(f)
+        obj = json.load(f)
         return obj
