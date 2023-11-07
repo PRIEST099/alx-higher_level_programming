@@ -1,4 +1,4 @@
-#!/ussr/bin/python3
+#!/usr/bin/python3
 """a module to use append in file I/O"""
 
 
