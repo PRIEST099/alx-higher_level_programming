@@ -1,7 +1,7 @@
 #!/usr/bin/node
 
 const arr = process.argv;
-if (arr.length === 2) {
+if (isNaN(process.argv[2])) {
   console.log('No argument');
 } else {
   console.log(arr[2]);
